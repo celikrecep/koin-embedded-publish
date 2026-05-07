@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.koin.test.verify
+package embedded.koin.test.verify
 
 class MissingKoinDefinitionException(msg: String) : Exception(msg)

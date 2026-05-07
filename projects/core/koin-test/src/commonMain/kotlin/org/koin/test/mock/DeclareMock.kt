@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test.mock
+package embedded.koin.test.mock
 
-import org.koin.core.Koin
-import org.koin.core.annotation.KoinInternalApi
-import org.koin.core.qualifier.Qualifier
-import org.koin.core.scope.Scope
-import org.koin.test.KoinTest
+import embedded.koin.core.Koin
+import embedded.koin.core.annotation.KoinInternalApi
+import embedded.koin.core.qualifier.Qualifier
+import embedded.koin.core.scope.Scope
+import embedded.koin.test.KoinTest
 import kotlin.reflect.KClass
 
 /**

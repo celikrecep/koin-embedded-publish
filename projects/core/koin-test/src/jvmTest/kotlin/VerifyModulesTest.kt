@@ -1,12 +1,12 @@
-import org.koin.core.annotation.KoinExperimentalAPI
+import embedded.koin.core.annotation.KoinExperimentalAPI
 import kotlin.test.Test
 import kotlin.test.fail
-import org.koin.core.module.dsl.factoryOf
-import org.koin.core.module.dsl.singleOf
-import org.koin.dsl.bind
-import org.koin.dsl.module
-import org.koin.test.Simple
-import org.koin.test.verify.*
+import embedded.koin.core.module.dsl.factoryOf
+import embedded.koin.core.module.dsl.singleOf
+import embedded.koin.dsl.bind
+import embedded.koin.dsl.module
+import embedded.koin.test.Simple
+import embedded.koin.test.verify.*
 
 class VerifyModulesTest {
 

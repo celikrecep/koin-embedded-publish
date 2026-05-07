@@ -39,8 +39,8 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":core:koin-core"))
-            api(project(":core:koin-core-annotations"))
+            api(project(":embedded:embedded-koin-core"))
+            api(project(":embedded:embedded-koin-core-annotations"))
             api(libs.kotlin.test)
         }
         jvmMain.dependencies {

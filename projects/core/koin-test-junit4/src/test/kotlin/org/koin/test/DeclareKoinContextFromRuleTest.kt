@@ -1,11 +1,11 @@
-package org.koin.test
+package embedded.koin.test
 
 import junit.framework.TestCase.assertNotNull
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
-import org.koin.core.logger.Level
-import org.koin.dsl.module
+import embedded.koin.core.logger.Level
+import embedded.koin.dsl.module
 
 class DeclareKoinContextFromRuleTest : AutoCloseKoinTest() {
 

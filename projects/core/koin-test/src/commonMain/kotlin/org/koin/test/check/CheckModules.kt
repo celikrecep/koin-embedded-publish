@@ -16,24 +16,24 @@
 @file:Suppress("UNUSED_PARAMETER")
 @file:OptIn(KoinInternalApi::class)
 
-package org.koin.test.check
+package embedded.koin.test.check
 
-import org.koin.core.Koin
-import org.koin.core.KoinApplication
-import org.koin.core.annotation.KoinInternalApi
-import org.koin.core.context.startKoin
-import org.koin.core.context.stopKoin
-import org.koin.core.definition.BeanDefinition
-import org.koin.core.logger.Level
-import org.koin.core.module.Module
-import org.koin.core.parameter.ParametersHolder
-import org.koin.core.qualifier.Qualifier
-import org.koin.core.qualifier.TypeQualifier
-import org.koin.core.scope.Scope
-import org.koin.dsl.KoinAppDeclaration
-import org.koin.mp.KoinPlatformTools
-import org.koin.test.mock.MockProvider
-import org.koin.test.parameter.MockParameter
+import embedded.koin.core.Koin
+import embedded.koin.core.KoinApplication
+import embedded.koin.core.annotation.KoinInternalApi
+import embedded.koin.core.context.startKoin
+import embedded.koin.core.context.stopKoin
+import embedded.koin.core.definition.BeanDefinition
+import embedded.koin.core.logger.Level
+import embedded.koin.core.module.Module
+import embedded.koin.core.parameter.ParametersHolder
+import embedded.koin.core.qualifier.Qualifier
+import embedded.koin.core.qualifier.TypeQualifier
+import embedded.koin.core.scope.Scope
+import embedded.koin.dsl.KoinAppDeclaration
+import embedded.koin.mp.KoinPlatformTools
+import embedded.koin.test.mock.MockProvider
+import embedded.koin.test.parameter.MockParameter
 
 //TODO TO BE DEPRECATED in 4.0
 
@@ -42,7 +42,7 @@ import org.koin.test.parameter.MockParameter
  */
 @Deprecated(
     message = "Migrate to verify() API",
-    replaceWith = ReplaceWith("org.koin.test.verify.Verify")
+    replaceWith = ReplaceWith("embedded.koin.test.verify.Verify")
 )
 fun KoinApplication.checkModules(parameters: CheckParameters? = null) = koin.checkModules(parameters)
 
@@ -55,7 +55,7 @@ fun KoinApplication.checkModules(parameters: CheckParameters? = null) = koin.che
  */
 @Deprecated(
     message = "Migrate to verify() API",
-    replaceWith = ReplaceWith("org.koin.test.verify.Verify")
+    replaceWith = ReplaceWith("embedded.koin.test.verify.Verify")
 )
 fun checkModules(level: Level = Level.INFO, parameters: CheckParameters? = null, appDeclaration: KoinAppDeclaration) {
     startKoin(appDeclaration)
@@ -72,7 +72,7 @@ fun checkModules(level: Level = Level.INFO, parameters: CheckParameters? = null,
  */
 @Deprecated(
     message = "Migrate to verify() API",
-    replaceWith = ReplaceWith("modules.verifyAll()", "org.koin.test.verify.verifyAll")
+    replaceWith = ReplaceWith("modules.verifyAll()", "embedded.koin.test.verify.verifyAll")
 )
 fun checkKoinModules(modules: List<Module>, appDeclaration: KoinAppDeclaration = {}, parameters: CheckParameters? = null) {
     startKoin(appDeclaration)
@@ -112,7 +112,7 @@ fun checkKoinModules(vararg modules: Module, level: Level = Level.INFO, paramete
  */
 @Deprecated(
     message = "Migrate to verify() API",
-    replaceWith = ReplaceWith("org.koin.test.verify.Verify")
+    replaceWith = ReplaceWith("embedded.koin.test.verify.Verify")
 )
 fun Koin.checkModules(parametersDefinition: CheckParameters? = null) {
     logger.info("[Check] checking modules ...")

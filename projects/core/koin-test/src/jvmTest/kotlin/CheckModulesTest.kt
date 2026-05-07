@@ -1,12 +1,12 @@
 import org.junit.After
-import org.koin.core.context.stopKoin
+import embedded.koin.core.context.stopKoin
 import kotlin.test.Test
 import kotlin.test.fail
-import org.koin.core.error.InstanceCreationException
-import org.koin.dsl.module
-import org.koin.test.Simple
-import org.koin.test.check.checkKoinModules
-import org.koin.test.verify.MissingKoinDefinitionException
+import embedded.koin.core.error.InstanceCreationException
+import embedded.koin.dsl.module
+import embedded.koin.test.Simple
+import embedded.koin.test.check.checkKoinModules
+import embedded.koin.test.verify.MissingKoinDefinitionException
 
 class CheckModulesTest {
 

@@ -1,9 +1,9 @@
-package org.koin.test.parameter
+package embedded.koin.test.parameter
 
-import org.koin.core.parameter.ParametersHolder
-import org.koin.core.scope.Scope
-import org.koin.mp.KoinPlatformTools
-import org.koin.test.mock.MockProvider
+import embedded.koin.core.parameter.ParametersHolder
+import embedded.koin.core.scope.Scope
+import embedded.koin.mp.KoinPlatformTools
+import embedded.koin.test.mock.MockProvider
 import kotlin.reflect.KClass
 
 @Suppress("UNCHECKED_CAST")

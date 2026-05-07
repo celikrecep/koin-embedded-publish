@@ -1,9 +1,9 @@
-package org.koin.test.mock
+package embedded.koin.test.mock
 
-import org.koin.core.qualifier.Qualifier
-import org.koin.mp.KoinPlatformTools
-import org.koin.test.KoinTest
-import org.koin.test.get
+import embedded.koin.core.qualifier.Qualifier
+import embedded.koin.mp.KoinPlatformTools
+import embedded.koin.test.KoinTest
+import embedded.koin.test.get
 
 inline fun <reified T : Any> KoinTest.declare(
     qualifier: Qualifier? = null,

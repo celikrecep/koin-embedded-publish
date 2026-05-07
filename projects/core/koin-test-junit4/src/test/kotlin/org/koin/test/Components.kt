@@ -1,6 +1,6 @@
-package org.koin.test
+package embedded.koin.test
 
-import org.koin.core.qualifier.Qualifier
+import embedded.koin.core.qualifier.Qualifier
 import java.util.*
 
 @Suppress("unused")

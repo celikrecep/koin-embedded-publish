@@ -1,10 +1,10 @@
-package org.koin.test
+package embedded.koin.test
 
-import org.koin.core.context.loadKoinModules
-import org.koin.core.context.startKoin
-import org.koin.core.context.stopKoin
-import org.koin.core.logger.Level
-import org.koin.dsl.module
+import embedded.koin.core.context.loadKoinModules
+import embedded.koin.core.context.startKoin
+import embedded.koin.core.context.stopKoin
+import embedded.koin.core.logger.Level
+import embedded.koin.dsl.module
 import kotlin.test.Test
 import kotlin.test.fail
 

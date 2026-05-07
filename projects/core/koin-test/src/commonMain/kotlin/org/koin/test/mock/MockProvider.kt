@@ -1,4 +1,4 @@
-package org.koin.test.mock
+package embedded.koin.test.mock
 
 import kotlin.reflect.KClass
 

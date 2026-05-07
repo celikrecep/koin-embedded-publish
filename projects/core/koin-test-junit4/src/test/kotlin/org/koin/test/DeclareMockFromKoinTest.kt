@@ -1,14 +1,14 @@
-package org.koin.test
+package embedded.koin.test
 
 import org.junit.Assert
 import org.junit.Assert.assertNotEquals
 import org.junit.Rule
 import org.junit.Test
-import org.koin.core.context.startKoin
-import org.koin.core.logger.Level
-import org.koin.dsl.module
-import org.koin.test.mock.MockProviderRule
-import org.koin.test.mock.declareMock
+import embedded.koin.core.context.startKoin
+import embedded.koin.core.logger.Level
+import embedded.koin.dsl.module
+import embedded.koin.test.mock.MockProviderRule
+import embedded.koin.test.mock.declareMock
 import org.mockito.BDDMockito
 import org.mockito.Mockito
 import java.util.*

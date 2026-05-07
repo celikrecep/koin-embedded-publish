@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test
+package embedded.koin.test
 
 import org.junit.After
-import org.koin.core.context.stopKoin
+import embedded.koin.core.context.stopKoin
 
 /**
  * Extended Koin Test - embed autoclose @after method to close Koin after every test

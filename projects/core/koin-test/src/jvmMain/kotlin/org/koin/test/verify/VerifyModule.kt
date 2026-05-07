@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test.verify
+package embedded.koin.test.verify
 
-import org.koin.core.module.Module
+import embedded.koin.core.module.Module
 import kotlin.reflect.KClass
 import kotlin.time.measureTime
 

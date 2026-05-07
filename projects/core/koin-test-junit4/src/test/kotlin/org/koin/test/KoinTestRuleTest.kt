@@ -1,11 +1,11 @@
-package org.koin.test
+package embedded.koin.test
 
 import org.junit.FixMethodOrder
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runners.MethodSorters
-import org.koin.core.logger.Level
-import org.koin.test.mock.declare
+import embedded.koin.core.logger.Level
+import embedded.koin.test.mock.declare
 
 /**
  * Tests for [KoinTestRule]. [FixMethodOrder] is used intentionally because it is important to run

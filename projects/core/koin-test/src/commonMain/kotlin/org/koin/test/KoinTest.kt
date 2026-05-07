@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test
+package embedded.koin.test
 
-import org.koin.core.component.KoinComponent
-import org.koin.core.parameter.ParametersDefinition
-import org.koin.core.qualifier.Qualifier
-import org.koin.mp.KoinPlatformTools
+import embedded.koin.core.component.KoinComponent
+import embedded.koin.core.parameter.ParametersDefinition
+import embedded.koin.core.qualifier.Qualifier
+import embedded.koin.mp.KoinPlatformTools
 
 /**
  * Koin Test tools

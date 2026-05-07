@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test.mock
+package embedded.koin.test.mock
 
 import org.junit.rules.TestRule
 import org.junit.runner.Description

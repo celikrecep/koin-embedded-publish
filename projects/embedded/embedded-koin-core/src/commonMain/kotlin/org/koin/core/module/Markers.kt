@@ -1,0 +1,10 @@
+package embedded.koin.core.module
+
+@DslMarker
+annotation class KoinApplicationDslMarker
+
+@DslMarker
+annotation class KoinDslMarker
+
+@DslMarker
+annotation class OptionDslMarker

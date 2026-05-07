@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test.verify
+package embedded.koin.test.verify
 
-import org.koin.core.annotation.InjectedParam
-import org.koin.core.annotation.KoinExperimentalAPI
-import org.koin.core.annotation.KoinInternalApi
-import org.koin.core.annotation.Provided
-import org.koin.core.definition.BeanDefinition
-import org.koin.core.definition.IndexKey
-import org.koin.core.instance.InstanceFactory
-import org.koin.core.module.Module
-import org.koin.core.module.flatten
-import org.koin.ext.getFullName
+import embedded.koin.core.annotation.InjectedParam
+import embedded.koin.core.annotation.KoinExperimentalAPI
+import embedded.koin.core.annotation.KoinInternalApi
+import embedded.koin.core.annotation.Provided
+import embedded.koin.core.definition.BeanDefinition
+import embedded.koin.core.definition.IndexKey
+import embedded.koin.core.instance.InstanceFactory
+import embedded.koin.core.module.Module
+import embedded.koin.core.module.flatten
+import embedded.koin.ext.getFullName
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 import kotlin.reflect.KVisibility

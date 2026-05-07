@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test.check
+package embedded.koin.test.check
 
-import org.koin.core.Koin
-import org.koin.core.parameter.ParametersHolder
-import org.koin.core.parameter.parametersOf
-import org.koin.core.qualifier.Qualifier
-import org.koin.core.qualifier.qualifier
-import org.koin.mp.KoinPlatformTools
-import org.koin.test.mock.MockProvider
+import embedded.koin.core.Koin
+import embedded.koin.core.parameter.ParametersHolder
+import embedded.koin.core.parameter.parametersOf
+import embedded.koin.core.qualifier.Qualifier
+import embedded.koin.core.qualifier.qualifier
+import embedded.koin.mp.KoinPlatformTools
+import embedded.koin.test.mock.MockProvider
 import kotlin.reflect.KClass
 
 //TODO TO BE DEPRECATED in 4.0

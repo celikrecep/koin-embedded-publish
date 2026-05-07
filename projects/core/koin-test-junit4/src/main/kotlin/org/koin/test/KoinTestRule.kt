@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.koin.test
+package embedded.koin.test
 
 import org.junit.rules.TestRule
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
-import org.koin.core.Koin
-import org.koin.core.annotation.KoinInternalApi
-import org.koin.core.context.startKoin
-import org.koin.core.context.stopKoin
-import org.koin.dsl.KoinAppDeclaration
-import org.koin.mp.KoinPlatformTools
+import embedded.koin.core.Koin
+import embedded.koin.core.annotation.KoinInternalApi
+import embedded.koin.core.context.startKoin
+import embedded.koin.core.context.stopKoin
+import embedded.koin.dsl.KoinAppDeclaration
+import embedded.koin.mp.KoinPlatformTools
 
 /**
  * [TestRule] which will automatically start and stop Koin.
