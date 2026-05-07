@@ -1,0 +1,8 @@
+jdk:
+  - openjdk17
+
+before_install:
+  - cd projects
+
+install:
+  - ./gradlew clean publishToMavenLocal -Pgroup=com.github.celikrecep -Pversion=$VERSION -xtest --no-configuration-cache
