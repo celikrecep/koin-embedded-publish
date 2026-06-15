@@ -1,6 +1,9 @@
+
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.compose.compiler)
 }
 
 val koinVersion: String by project
@@ -13,21 +16,12 @@ kotlin {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
         }
     }
-    
+
     jvm {
         compilerOptions {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
         }
     }
-
-//    // Enable context receivers for all targets
-//    targets.all {
-//        compilations.all {
-//            kotlinOptions {
-//                freeCompilerArgs += listOf("-Xcontext-receivers")
-//            }
-//        }
-//    }
 
     js(IR) {
         nodejs()
@@ -36,8 +30,8 @@ kotlin {
     }
 
     wasmJs {
-        binaries.executable()
         nodejs()
+        binaries.executable()
     }
 
     iosX64()
@@ -48,30 +42,25 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(project(":embedded:embedded-koin-core"))
-            api(libs.jb.lifecycleViewmodel)
-            api(libs.jb.lifecycleViewmodelSavedState)
-        }
-        commonTest.dependencies {
-            implementation(libs.kotlin.test)
-            implementation(libs.test.junit)
+            api(project(":embedded:embedded-koin-compose-viewmodel"))
+            api(libs.jb.composeNavigation)
         }
     }
 }
 
-val androidCompileSDK : String by project
+val androidCompileSDK: String by project
 val androidMinSDK : String by project
 
 android {
-    namespace = "org.koin.viewmodel"
+    namespace = "org.koin.compose.viewmodel.navigation"
     compileSdk = androidCompileSDK.toInt()
     defaultConfig {
         minSdk = androidMinSDK.toInt()
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.targets.js.npm.tasks.KotlinNpmInstallTask>().configureEach {
+    args.add("--ignore-engines")
 }
 
 apply(from = file("../../gradle/publish.gradle.kts"))

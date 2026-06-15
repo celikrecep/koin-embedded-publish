@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.compose.compiler)
 }
 
 val koinVersion: String by project
@@ -13,21 +15,12 @@ kotlin {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_1_8)
         }
     }
-    
+
     jvm {
         compilerOptions {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
         }
     }
-
-//    // Enable context receivers for all targets
-//    targets.all {
-//        compilations.all {
-//            kotlinOptions {
-//                freeCompilerArgs += listOf("-Xcontext-receivers")
-//            }
-//        }
-//    }
 
     js(IR) {
         nodejs()
@@ -36,8 +29,8 @@ kotlin {
     }
 
     wasmJs {
-        binaries.executable()
         nodejs()
+        binaries.executable()
     }
 
     iosX64()
@@ -49,12 +42,17 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             api(project(":embedded:embedded-koin-core"))
-            api(libs.jb.lifecycleViewmodel)
-            api(libs.jb.lifecycleViewmodelSavedState)
+            api(libs.jb.composeRuntime)
+            api(libs.jb.composeFoundation)
         }
-        commonTest.dependencies {
-            implementation(libs.kotlin.test)
-            implementation(libs.test.junit)
+        androidMain.dependencies {
+            api(project(":embedded:embedded-koin-android"))
+        }
+        nativeMain.dependencies {
+        }
+        wasmJsMain.dependencies {
+        }
+        jsMain.dependencies {
         }
     }
 }
@@ -63,10 +61,14 @@ val androidCompileSDK : String by project
 val androidMinSDK : String by project
 
 android {
-    namespace = "org.koin.viewmodel"
+    namespace = "org.koin.compose"
     compileSdk = androidCompileSDK.toInt()
     defaultConfig {
         minSdk = androidMinSDK.toInt()
+    }
+    buildFeatures {
+        buildConfig = false
+        compose = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

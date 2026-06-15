@@ -36,6 +36,15 @@ include(
     ":embedded:embedded-koin-core",
     ":embedded:embedded-koin-core-viewmodel",
     ":embedded:embedded-koin-android",
+    // Compose
+    ":embedded:embedded-koin-compose",
+    ":embedded:embedded-koin-compose-viewmodel",
+    ":embedded:embedded-koin-compose-viewmodel-navigation",
+    ":embedded:embedded-koin-androidx-compose",
+    ":embedded:embedded-koin-androidx-compose-navigation",
+    // Navigation
+    ":embedded:embedded-koin-androidx-navigation",
+    // Tests
     ":core:koin-test",
     ":core:koin-test-junit4",
 )
