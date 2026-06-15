@@ -24,8 +24,8 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.celikrecep.koin-embedded-publish:embedded-koin-core:4.1.1")
-    implementation("com.github.celikrecep.koin-embedded-publish:embedded-koin-android:4.1.1")
+    implementation("com.github.celikrecep.koin-embedded-publish:embedded-koin-core:4.1.1-r1")
+    implementation("com.github.celikrecep.koin-embedded-publish:embedded-koin-android:4.1.1-r1")
 }
 ```
 
